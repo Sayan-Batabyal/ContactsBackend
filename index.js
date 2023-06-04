@@ -29,8 +29,9 @@ app.get("/",(req,res)=>{
     res.send("Welcome to Contact Api")
 })
 
+connect().then(()=>{
+    app.listen(8800,()=>{
+        console.log("Connected to Backend");
+    })
 
-app.listen(8800,()=>{
-    connect()
-    console.log("Connected to Backend");
 })
